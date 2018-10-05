@@ -1,7 +1,7 @@
 {
   "name": "cookery",
   "version": "0.0.1",
-  "description": "A tool to create PDF recipe books from Open Recipe Format (ORF) files.",
+  "description": "A tool to create PDF cookbooks from Open Recipe Format (ORF) files.",
   "main": "cookery.js",
   "bin": {
     "cookery": "src/cookery.js"
