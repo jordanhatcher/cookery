@@ -5,7 +5,7 @@ const yaml = require('js-yaml');
 const Joi = require('joi');
 const Mustache = require('mustache');
 
-const templateFile = 'recipe.tpl';
+const templateFile = 'cookbook.mustache';
 
 // Schema for validating ORF format
 const schema = Joi.object().keys({
