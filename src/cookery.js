@@ -11,7 +11,7 @@ const openRecipe = require('./openrecipe');
 const tempHtmlFile = '/tmp/tempCookbook.html';
 
 program
-  .version('0.0.0')
+  .version('0.0.1')
   .option('-n, --name [value]', 'Name of the cookbook')
   .parse(process.argv);
 
