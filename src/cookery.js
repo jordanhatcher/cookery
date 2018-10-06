@@ -13,7 +13,7 @@ const tempHtmlFile = '/tmp/tempCookbook.html';
 program
   .version('0.0.1')
   .option('-n, --name [value]', 'Name of the cookbook')
-  .option('-n, --config [value]', 'name of the cookbook file config')
+  .option('-c, --config [value]', 'name of the cookbook file config')
   .parse(process.argv);
 
 if (typeof program.name === 'string') {
