@@ -13,11 +13,24 @@ const tempHtmlFile = '/tmp/tempCookbook.html';
 program
   .version('0.0.1')
   .option('-n, --name [value]', 'Name of the cookbook')
+  .option('-c, --config [value]', 'name of the cookbook file config')
   .parse(process.argv);
 
 if (typeof program.name === 'string') {
   // Load recipe book configuration
-  const recipeBookFilePath = path.join(process.cwd(), 'recipeBook.yml');
+  let defaultConfigNames = ['cookbook.yml', 'cookbook.yaml'];
+  let configFileName = '';
+  if (fs.existsSync(defaultConfigNames[0])) {
+    configFileName = defaultConfigNames[0];
+  } else if (fs.existsSync(defaultConfigNames[1])) {
+    configFileName = defaultConfigNames[1];
+  } else if (fs.existsSync(program.config)) {
+    configFileName = program.config;
+  } else {
+    throw new Error('Cannot found a cookbook.[yml, yaml] file. If you are using other name for the cookbook config please use the --config flag');
+  }
+
+  const recipeBookFilePath = path.join(process.cwd(), configFileName);
   const recipeBookConfig = yaml.safeLoad(fs.readFileSync(recipeBookFilePath));
 
   const openRecipeFiles = recipeBookConfig.recipes;
