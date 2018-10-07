@@ -12,9 +12,11 @@
   "author": "Jordan Hatcher",
   "license": "CC0-1.0",
   "dependencies": {
+    "chai": "^4.2.0",
     "commander": "^2.18.0",
     "joi": "^13.6.0",
     "js-yaml": "^3.12.0",
+    "mocha": "^5.2.0",
     "mustache": "^2.3.2",
     "nightmare": "^3.0.1"
   }
