@@ -37,7 +37,7 @@ const schema = Joi.object().keys({
     amounts: Joi.array().items(Joi.object().keys({
       amount: Joi.alternatives([Joi.string(), Joi.number()]).required(),
       unit: Joi.string().required()
-    })).min(1).required(),
+    })).required(),
     processing: Joi.array().items(Joi.string()).min(1),
     notes: Joi.array().items(Joi.string()).min(1),
     usda_num: [Joi.string(), Joi.number()],
@@ -46,12 +46,12 @@ const schema = Joi.object().keys({
       amounts: Joi.array().items(Joi.object().keys({
         amount: Joi.alternatives([Joi.string(), Joi.number()]).required(),
         unit: Joi.string().required()
-      })).min(1).required(),
+      })).required(),
       processing: Joi.array().items(Joi.string()),
       notes: Joi.array().items(Joi.string()).min(1),
       usda_num: Joi.string()
     })).min(1)
-  })).min(1).required(),
+  })).required(),
 
   // Steps for the recipe
   steps: Joi.array().items(Joi.object().keys({
@@ -61,13 +61,13 @@ const schema = Joi.object().keys({
       critical_control_point: Joi.string()
     }),
     notes: Joi.array().items(Joi.string()).min(1)
-  })).min(1).required(),
+  })).required(),
 
   // How much the recipe makes
   yields: Joi.array().items(Joi.object().keys({
     amount: Joi.alternatives([Joi.string(), Joi.number()]).required(),
     unit: Joi.string().required()
-  })).min(1).required(),
+  })).required(),
 
   // Notes about the whole recipe
   notes: Joi.array().items(Joi.string()).min(1)
