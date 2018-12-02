@@ -6,26 +6,32 @@ found [here](https://github.com/jordanhatcher/openrecipeformat).
 
 ## Installation
 Clone this repo, and change into the cookery directory:
+
 `git clone https://github.com/jordanhatcher/cookery && cd cookery`
 
 Install the package globally (may need sudo):
+
 `npm install -g --unsafe-perm`
 
 Verify the installation:
+
 `cookery --version`
 
 ## Usage
 
-As an example, change into the examples directory, and run:
+To generate an example cookbook called "MyExampleCookbook.pdf,
+change into the examples directory, and run:
 `cookery --name MyExampleCookbook`
 
 In the directory you run `cookery` from, there should be two things:
-1. A file `recipeBook.yml` containing a key `recipes` with the value
+1. A config file named `cookbook.yml` or `cookbook.yaml` containing a key `recipes` with the value
 being an ordered list of relative file paths to ORF files to be included in
-the book.
-2. The ORF files specified in the `recipeBook.yml` file.
+the book. Alternatively, a different yaml file can be used with the `-c | --config` command
+line option.
 
-Example structure of the `recipeBook.yml` file:
+2. The ORF files specified in the configuration file.
+
+Example structure of the configuration file:
 ```yaml
 recipes:
   - recipe1.yaml
