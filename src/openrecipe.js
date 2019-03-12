@@ -1,6 +1,8 @@
+// Built-in node modules
 const fs = require('fs');
 const path = require('path');
 
+// External node modules
 const yaml = require('js-yaml');
 const Joi = require('joi');
 const Mustache = require('mustache');
@@ -74,16 +76,17 @@ const schema = Joi.object().keys({
 }).pattern(/X-\w+/, Joi.any());
 
 /**
- * Loads an open recipe file and validates it
- * Returns null if the file fails ORF validation
+ * Loads an open recipe file and validates it.
+ * @param {string} file open recipe file to open
+ * @returns {object} ORF file
  */
 function load(file) {
   let result = null;
-  let openRecipe = yaml.safeLoad(fs.readFileSync(file));
+  const openRecipe = yaml.safeLoad(fs.readFileSync(file));
 
-  Joi.validate(openRecipe, schema, (err, data) => {
+  Joi.validate(openRecipe, schema, (err) => {
     if (err) {
-      console.error(err);
+      throw Error(err);
     } else {
       result = openRecipe;
     }
@@ -95,14 +98,11 @@ function load(file) {
 /**
  * Converts an object in open recipe format to html
  * @param {object} openRecipe the open recipe object loaded from a file
- * @return {string} the templated file
+ * @returns {string} the templated file
  */
 function render(openRecipe) {
   const template = path.join(__dirname, templateFile);
   return Mustache.render(fs.readFileSync(template, 'utf-8'), openRecipe);
 }
 
-module.exports = {
-  load: load,
-  render: render
-};
+module.exports = { load, render };
