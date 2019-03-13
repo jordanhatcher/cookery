@@ -7,7 +7,7 @@
     "cookery": "src/cookery.js"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha tests"
   },
   "author": "Jordan Hatcher",
   "license": "CC0-1.0",

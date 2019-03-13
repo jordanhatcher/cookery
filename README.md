@@ -21,6 +21,7 @@ Verify the installation:
 
 To generate an example cookbook called "MyExampleCookbook.pdf,
 change into the examples directory, and run:
+
 `cookery --name MyExampleCookbook`
 
 In the directory you run `cookery` from, there should be two things:
@@ -38,6 +39,9 @@ recipes:
   - recipe2.yaml
   - recipe3.yaml
 ```
+
+## Running tests
+`npm test`
 
 ## Contributing
 

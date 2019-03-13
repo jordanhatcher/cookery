@@ -1,0 +1,102 @@
+{
+  "recipe_uuid": null,
+  "recipe_name": "Banana Bread",
+  "source_authors": "Joseph Hall <perlhoser@gmail.com>",
+  "source_url": null,
+  "source_book": null,
+  "oven_temp": {
+    "amount": 350,
+    "unit": "F"
+  },
+  "oven_fan": "Off",
+  "oven_time": "50 - 60 minutes",
+  "yields": [
+    {
+      "amount": 3,
+      "unit": "Loaves"
+    }
+  ],
+  "ingredients": [
+    {
+      "ingredient": "All Purpose Flour",
+      "usda_num": 20581,
+      "amounts": [
+        {
+          "amount": "3 1/2",
+          "unit": "cups"
+        }
+      ],
+      "substitutions": [
+        {
+          "ingredient": "Oat Flour",
+          "usda_num": "08122",
+          "amounts": [
+            {
+              "amount": "3 1/2",
+              "unit": "cups"
+            }
+          ],
+          "notes": [
+            "Make oat flour by processing instant oats in food processor."
+          ]
+        }
+      ]
+    },
+    {
+      "ingredient": "Baking Soda",
+      "usda_num": 18372,
+      "amounts": [
+        {
+          "amount": 2,
+          "unit": "tsp"
+        }
+      ]
+    },
+    {
+      "ingredient": "Baking Powder",
+      "usda_num": 18369,
+      "amounts": [
+        {
+          "amount": 2,
+          "unit": "tsp"
+        }
+      ]
+    },
+    {
+      "ingredient": "Salt",
+      "usda_num": "02047",
+      "amounts": [
+        {
+          "amount": 1,
+          "unit": "tsp"
+        }
+      ]
+    },
+    {
+      "ingredient": "Cinnamon, Ground",
+      "usda_num": "02010",
+      "amounts": [
+        {
+          "amount": 2,
+          "unit": "tsp"
+        }
+      ],
+      "notes": [
+        "Optional"
+      ]
+    }
+  ],
+  "steps": [
+    {
+      "step": "Preheat oven to 350F."
+    },
+    {
+      "step": "Whisk together the flour, baking soda, baking powder, salt, cinnamon, cloves and nutmeg."
+    }
+  ],
+  "notes": [
+    "This recipe is designed for high altitude (~4500 ft) baking.",
+    "Other than the chocolate chips, this recipe may serve as a reference recipe for banana bread. Other ingredients may be used in addition to or instead of the chocolate chips, or they may be ommitted entirely.",
+    "Yields three 3 x 4 x 9 loaves."
+  ]
+}
